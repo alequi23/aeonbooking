@@ -8,12 +8,12 @@ function LogIn(){
 
     
     do{
-        let user = prompt("Type your user").toUpperCase
+        let user = prompt("Type your user").toUpperCase()
         let search = users.filter( (x)=> x.toUpperCase().includes(user) )
         if(user === null){
             break
         }
-        if(user === search && attempts <=3){
+        if(search.length >0 && attempts <=3){
             alert("Welcome " + search)
             identify =false
         }else{
